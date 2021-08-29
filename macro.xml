@@ -1,0 +1,7 @@
+ <macro name="#DECLARE to Comment" in_toolbar="true" version="2">
+    <text>
+      <method>
+        macroCreateCommentFromVariables
+      </method>
+    </text>
+  </macro>
