@@ -82,6 +82,8 @@ If ($isDeclaration)
 			$codeLines.unshift("--")
 		End if 
 		
+		$variableNames:=$variableNames.reverse()
+		
 		For each ($variable; $variableNames)
 			$posSep:=Position:C15(":"; $variable)
 			
@@ -90,6 +92,7 @@ If ($isDeclaration)
 				$c:=$dataTypes.query("type =:1"; $type)
 				$codeLines.unshift("▶️ "+$c[0].emoji+": "+Substring:C12($variable; 1; $posSep-1))
 			Else 
+				$codeLines.unshift("▶️ "+$c[0].emoji+": "+$variable)
 				
 			End if 
 		End for each 
